@@ -1,0 +1,74 @@
+Version 3.13.8
+==============
+This release inclues
+- update to nuget package to fix casing of NETStandard.Library nuget dependency
+- Add serialization packages to netstandard1.4 target as they are not part of netstandard.
+
+Version 3.13.7
+==============
+This release contains update to nuget package to use meta package and explicitly define target frameworks for the library.
+
+Version 3.13.6
+==============
+This release includes
+- Fix where UWP apps were ErrorHttp was causing unhandled exception.
+- Fix .NET webview to add javascript:// to whitelist.
+- Fix .NET webview to ensure if redirect_uri is hit, ignore errors raised by webview after that event.
+- Add support for UIStatusBarStyle in Xamarin.iOS.
+
+Version 3.13.5
+==============
+This release includes
+- Update to OBO flows to force userassertion match against cache entries.
+- Fix an issue where UWP was not handling ErrorHttp status and returning uncaught exception.
+
+Version 3.13.4
+==============
+This release includes
+- Fix to force iOS UIViewController to run on UI thread.
+- Fix regresssion where content was passed as a file path for UserCredential flows.
+- Fix an issue where internal exception was being thrown back to the developer.
+
+Version 3.13.3
+==============
+This release includes
+- Fix for null pointer exception when hash was computed on a null string.
+- Add support to return complete http response body as an inner exception.
+
+Version 3.13.2
+==============
+This release includes
+- Adding default constructor to UserInfo class to circumvent CoreCLR deserialization issue.
+
+Version 3.13.1
+==============
+This release contains
+- Fix to add ConfigureAwait(false) to all await calls to avoid deadlocks.
+- Fix bug where null reference was thrown in Android when onResult was called for an activity.
+- ext_expires_in claim was not being read from server response.
+- Disable Cross-Tenant refresh token redemption for client credentials flow.
+- Fix the bug where access token in authentication result could be null in multi-threaded scenarios.
+- Fix a bug where UserAssertion was not assumed to be JWT by default.
+- Add support for SecureString client secret.
+- Fix bug where null reference exception was thrown for AcquireTokenUsingDeviceCode.
+
+Version 3.12.0
+==============
+This release contains
+- Support for extended lifetime tokens.
+- Fix to allow hardware based keys to perform authentication.
+- Validate signing certificate chain in Android.
+- Update NetStandard GA packages.
+- Fix bug in cache lookup where developer provided parameters were ignored.
+
+Version 3.10.305231913
+======================
+This release contains
+- Retargeting Xamarin Android to Lollipop (5.0)
+- Fix for PromptBehavior.Always in UWP apps where prompt=login was not sent to server.
+
+
+Version 3.10.305161347
+======================
+This release contains
+- Fix in GetAuthorizationURLAsync where QP were not getting appended correctly.
